@@ -110,3 +110,36 @@ print(len(cars))#длина списка
 ############################
 #Глава 4: работа со списками
 ############################
+magicians = ['alice', 'david', 'carolina']
+for magician in magicians:
+    print(magician)
+#
+for value in range(1,6):
+    print(value)
+#
+numbers = list(range(1,6))
+print(numbers)
+#
+numbers = list(range(2,11,2))#с увеличение на 2
+print(numbers)
+#
+digits = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,]
+min(digits)
+max(digits)
+sum(digits)
+#
+squares = [value**2 for value in range(1,11)]
+print(squares)
+#
+nums = [nums.insert(0, value) for value in range(1, 11)]
+print(nums)
+#
+nums = []
+for value in range(1, 101):
+    nums.append(value)
+
+print(nums)
+#
+my_list = [1, 2, 3]
+friend_list = my_list[:]#копируется список только срезом, иначе получится клон
+#
