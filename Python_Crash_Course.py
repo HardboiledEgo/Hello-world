@@ -174,4 +174,16 @@ for requested_topping in requested_toppings:
         print("Sorry, we don't have " + requested_topping + ".")
 
 print("\nFinished making your pizza!")
+#################
+#Глава 6: словари
+#################
+alien_0 = {'color': 'green', 'points': 5}#инициализация словаря
+print(alien_0['color'])
+print(alien_0['points'])
+#
+alien_0 = {'color': 'green', 'points': 5}
+print(alien_0)
+alien_0['x_position'] = 0
+alien_0['y_position'] = 25
+print(alien_0)
 #
