@@ -507,4 +507,9 @@ class ElectricCar(Car):
 
 my_tesla = ElectricCar('tesla', 'model s', 2020)
 my_tesla.battery.describe_battery()#обращение к методу атрибута осуществляется через имя_объекта.имя_атрибута.имя_метода_атрибута
+###Глава 10: файлы и исключения###
+#
+with open('pi_digits.txt') as file_object:#with закрывает файл как надобность в нём пропадает
+    contents = file_object.read()
+    print(contents)
 #
