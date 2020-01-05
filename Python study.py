@@ -5,7 +5,7 @@ if num % 2 == 0:
     max_per = num/2 - 1
 else:
     less_per = (num-1)/2
-    max_per = (num-1)/2
+    max_per = (num-1)/2 - 1
 
 num_ex = 45*num + 5*less_per + 15*max_per
 
