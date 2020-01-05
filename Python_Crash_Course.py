@@ -425,3 +425,36 @@ my_dog = Dog('Willie', 8)#стандартная не явная инициал�
 print("My dog's name is " + my_dog.name.title() + ".")#обращение к атрибутам класса через имя_объекта.имя_атрибута (если класс определн через self)
 print("My dog is " + str(my_dog.age) + " years old.")#str потому что в вызове класса передано число а не символ
 #
+class Car():
+    """Простая модель автомобиля."""
+    def __init__(self, make, model, year):
+        """Инициализирует атрибуты описания автомобиля."""
+        self.make = make
+        self.model = model
+        self.year = year
+        self.odometer_reading = 0#по умолчанию
+    def get_descriptive_name(self):
+        """Возвращает аккуратно отформатированное описание."""
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return long_name.title()
+    def read_odometer(self):
+        """Выводит пробег машины в милях."""
+        print("This car has " + str(self.odometer_reading) + " miles on it.")
+    def update_odometer(self, mileage):#изменение атрибута через метод, иногда можно изменить метод напрямую через присваивание
+        """
+        Устанавливает на одометре заданное значение.
+        При попытке обратной подкрутки изменение отклоняется.
+        """
+        if mileage >= self.odometer_reading:
+            self.odometer_reading = mileage
+        else:
+            print("You can't roll back an odometer!")
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year):
+        super().__init__(self, make, model, year)
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+my_new_car.read_odometer()
+#
