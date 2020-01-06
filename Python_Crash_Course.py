@@ -513,3 +513,40 @@ with open('pi_digits.txt') as file_object:#with закрывает файл ка
     contents = file_object.read()
     print(contents)
 #
+filename = 'pi_digits.txt'
+with open(filename) as file_object:
+    for line in file_object:
+        print(line.rstrip())#в предыдущих версиях при чтении по строкам оставались пустые строки, для этого писался рстрип сейчас очевидно не обязателен
+#
+filename = 'pi_digits.txt'
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+for line in lines:#сохранённые строки можно использовать вне блока with
+    print(line.rstrip())
+#
+filename = 'pi_digits.txt'
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()#пробелы слева остались с прошлой версии (текущая кстати 3.7.0)
+
+print(pi_string)
+print(len(pi_string))#читая данные из текстового файла, Python интерпретирует весь текст в файле как строку. Если вы читаете из текстового файла число и хотите работать с ним в числовом контексте, преобразуйте его в целое число функцией int() или в вещественное число функцией float().
+#
+filename = 'pi_million_digits.txt'
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.rstrip()
+
+birthday = '041596'
+if birthday in pi_string:
+    print("Your birthday appears in the first million digits of pi!")
+else:
+    print("Your birthday does not appear in the first million digits of pi.")
+#
