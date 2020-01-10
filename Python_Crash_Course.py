@@ -550,3 +550,27 @@ if birthday in pi_string:
 else:
     print("Your birthday does not appear in the first million digits of pi.")
 #
+try:#блок try пробует выполнить операцию после двоеточий, если false то ищт блок except и выполняет его
+    print(5/0)
+except ZeroDivisionError:
+    print('You can"t divide by zero!')
+#
+import json#модуль json используется для хранения и передачи данных между программами, изначально написан для js
+
+numbers = [2, 3, 5, 7, 11, 13]
+
+filename = 'numbers.json'
+with open(filename, 'w') as f_obj:
+    json.dump(numbers, f_obj)
+#
+import json
+
+filename = 'numbers.json'
+with open(filename) as f_obj:
+    numbers = json.load(f_obj)
+
+print(numbers)
+###Глава 11: тестирование
+scip
+###Часть 2. Глава 18. Знакомство с Django.
+
