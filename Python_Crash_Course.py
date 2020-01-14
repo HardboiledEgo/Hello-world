@@ -56,7 +56,7 @@ bicycles.append('honda')#добавление значения в конец с�
 print(bicycles)
 #
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
-bicycles.insert(0, 'ducati')#добавляет элемент списка в указанный индекс
+bicycles.insert(0, 'ducati')#добавляет элемент списка в указанный индекс, остальные смещаются на один
 print(bicycles)
 #
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
@@ -115,7 +115,7 @@ for magician in magicians:
     print(magician)
 #
 for value in range(1,6):
-    print(value)
+    print(value)#выведет от 1 до 5 включительно
 #
 numbers = list(range(1,6))
 print(numbers)
@@ -131,9 +131,6 @@ sum(digits)
 squares = [value**2 for value in range(1,11)]
 print(squares)
 #
-squares = [value**2 for value in range(1,11)]
-print(squares)
-#
 numbers = [val for val in range(1, 11)]
 print(numbers)
 #
@@ -144,7 +141,7 @@ for value in range(1, 101):
 print(nums)
 #
 my_list = [1, 2, 3]
-friend_list = my_list[:]#копируется список только срезом, иначе получится клон
+friend_list = my_list[:]#копируется список только срезом, иначе получится клон. клон меняется вместе с изменением оригинала, копия остаётся копией.
 #
 dimensions = (200, 50)#кортеж в круглых скобках(не изменяется), но можно переопределиь весь кортеж в вызове
 print(dimensions[0])
@@ -572,5 +569,5 @@ with open(filename) as f_obj:
 print(numbers)
 ###Глава 11: тестирование
 scip
-###Часть 2. Глава 18. Знакомство с Django.
+###Часть 2. Глава 12. Pygame.
 
