@@ -234,8 +234,8 @@ for language in set(favorite_languages.values()):#set проверяет пов�
     print(language.title())
 #
 aliens = []
+new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
 for alien_number in range(30):
-    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
     aliens.append(new_alien)
 
 for alien in aliens[:5]:
@@ -318,7 +318,7 @@ print(musician)
 #
 def get_formatted_name(first_name, last_name, middle_name=''):#среднее_имя по умолчанию пусто и игнорируется функцией как значение (bool = False)
     """Возвращает аккуратно отформатированное полное имя."""
-    if middle_name:
+    if middle_name:#пустая строка возвращает False
         full_name = first_name + ' ' + middle_name + ' ' + last_name
     else:
         full_name = first_name + ' ' + last_name
