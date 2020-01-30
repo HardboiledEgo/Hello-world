@@ -567,7 +567,8 @@ with open(filename) as f_obj:
     numbers = json.load(f_obj)
 
 print(numbers)
-###Глава 11: тестирование
-scip
-###Часть 2. Глава 12. Pygame.
+#третье издание, изменения:
+first_name = 'ada'
+second_name = 'lovelace'
+print(f"{first_name.title()} {second_name.title()}")#f-ссылки 
 
