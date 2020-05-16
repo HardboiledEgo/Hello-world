@@ -1,4 +1,3 @@
-filename = 'pi_digits.txt'
-with open(filename) as file_object:
-    for line in file_object:
-        print(line.rstrip())
+first_name = 'ada'
+second_name = 'lovelace'
+print(f"{first_name.title()} {second_name.title()}")#f-ссылки 
